@@ -4,18 +4,24 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body ng-controller="domIntCtrl">
     <!-- Bind this input to the controller -->
-    <input />
+    <input ng-model="search.name"/>
+    <input ng-model="search.age"/>
 
+    <button ng-click="clicker()">Click Me</button>
     <!-- Display that input here -->
-    <div></div>
+    <div ng-show="name" ng-style="style">My name is {{search.name}}</div>
 
     <!-- Use this div as a template for our array of people -->
-    <div>
-      <h1>Put Name Here</h1>
-      <h3>Put Age Here</h3>
+    <div ng-repeat="person in people | filter: search">
+      <h1>{{person.name}}</h1>
+      <h3>{{person.age}}</h3>
     </div>
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="domInteractionsApp.js"></script>
+  <script src="domInteractionsCtrl.js"></script>
   </body>
 </html>

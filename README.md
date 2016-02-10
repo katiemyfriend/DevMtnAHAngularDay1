@@ -20,6 +20,10 @@
   - Purpose
   - `$scope`
  - Double binding
+ - `{{}}`
  - `ng-model`
  - `ng-show`
+ - `filter`
  - `ng-repeat`
+ - `ng-click`
+ - `ng-style`
